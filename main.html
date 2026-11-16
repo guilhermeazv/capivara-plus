@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Capivara+ | Portal do Estudante</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>C+</h2>
+                <div>
+                    <h3>Capivara+</h3>
+                    <p>Portal do Estudante</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="#inicio" class="active">🏠 Início</a>
+                <a href="#agenda">📅 Agenda</a>
+                <a href="#estudos">📚 Estudos</a>
+                <a href="#tarefas">✅ Tarefas</a>
+            </nav>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="content">
+
+            <header>
+                <h1>Bem-vindo ao Capivara+!</h1>
+                <p>Organize seus estudos e acompanhe sua rotina.</p>
+            </header>
+
+           <!-- INÍCIO -->
+<section id="inicio">
+
+    <h2>Painel de Desempenho</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>📋 Total de tarefas</h3>
+            <h2 id="totalTarefas">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>✅ Concluídas</h3>
+            <h2 id="tarefasConcluidas">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>⏳ Pendentes</h3>
+            <h2 id="tarefasPendentes">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>📚 Matérias</h3>
+            <h2 id="totalMaterias">0</h2>
+        </div>
+
+    </div>
+
+    <div class="card progresso">
+        <h3>Meu progresso</h3>
+
+        <div class="barra-fundo">
+            <div id="barraProgresso"></div>
+        </div>
+
+        <p id="textoProgresso">0% concluído</p>
+    </div>
+
+</section>
+            <!-- AGENDA -->
+<section id="agenda">
+
+    <h2>Minha Agenda</h2>
+
+    <div class="card">
+
+        <h3>Adicionar compromisso</h3>
+
+        <input
+            type="text"
+            id="nomeEvento"
+            placeholder="Nome da atividade"
+        >
+
+        <select id="tipoEvento">
+            <option value="Prova">Prova</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Compromisso">Compromisso</option>
+        </select>
+
+        <input
+            type="date"
+            id="dataEvento"
+        >
+
+        <button onclick="adicionarEvento()">
+            + Adicionar à agenda
+        </button>
+
+    </div>
+
+    <div class="card">
+        <h3>Próximos compromissos</h3>
+        <div id="listaAgenda"></div>
+    </div>
+
+</section>
+            
+
+<!-- ESTUDOS -->
+<section id="estudos">
+
+    <h2>Área de Estudos</h2>
+
+    <div class="card">
+
+        <h3>Adicionar matéria</h3>
+
+        <input
+            type="text"
+            id="nomeMateria"
+            placeholder="Nome da matéria"
+        >
+
+        <textarea
+            id="descricaoMateria"
+            placeholder="Descreva o conteúdo que deseja estudar"
+            rows="3"
+        ></textarea>
+
+        <input
+            type="url"
+            id="linkMateria"
+            placeholder="Link do material (opcional)"
+        >
+
+        <button onclick="adicionarMateria()">
+            + Adicionar matéria
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Minhas matérias</h3>
+
+        <div id="listaMaterias"></div>
+
+    </div>
+
+</section>
+
+           <!-- TAREFAS -->
+            <section id="tarefas">
+
+               <h2>Minhas Tarefas</h2>
+
+               <div class="card">
+
+               <h3>Adicionar nova tarefa</h3>
+
+            <input
+            type="text"
+            id="nomeTarefa"
+            placeholder="Digite o nome da tarefa"
+        >
+
+            <input
+            type="text"
+            id="materiaTarefa"
+            placeholder="Digite a matéria"
+        >
+
+        <button onclick="adicionarTarefa()">
+            + Adicionar tarefa
+        </button>
+
+    </div>
+
+    <div class="card">
+        <h3>Lista de atividades</h3>
+        <div id="listaTarefas"></div>
+    </div>
+
+</section>
+            <footer>
+                <p>© 2026 Capivara+ - Portal do Estudante</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
